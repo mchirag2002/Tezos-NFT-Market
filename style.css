@@ -65,6 +65,27 @@ header {
     text-align: center;
 }
 
+.nft {
+    color: white;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1), 0 6px 20px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    margin: 70px;
+}
+
+.nft-display {
+    color: white;
+    display: flex;
+
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
 .intro-box h1 {
     font-weight: bold;
 }
@@ -96,4 +117,65 @@ header {
 .buttons {
     display: flex;
     justify-intro-box: space-between;
+}
+
+.nft-display p {
+    font-size: medium;
+}
+
+.nft-display h2 {
+    font-size: x-large;
+}
+
+.nft-display-content {
+    width: 50%;
+}
+
+.nft-display-carousel {
+    width: 45%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.nft-display-carousel img {
+    border-radius: 30px;
+    width: 300px;
+    height: 550px;
+    transition: 0.2s;
+}
+
+.nft-display-carousel a {
+    transition: 0.2s;
+}
+
+.button-nft {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button-navbar button {
+    border-radius: 20px;
+    color: white;
+    background-color: #ff5b86;
+    font-weight: bold;
+    padding: 5px;
+    width: 12vw;
+    border-color: rgba(255, 255, 255, .2);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.5), 0 6px 10px 0 rgba(255, 255, 255, 0.19);
+}
+
+.footer {
+    color: aliceblue;
+    height: 15vh;
+}
+
+.footer hr {
+    width: 90%;
+}
+
+.footer p {
+    margin-top: 40px;
 }
