@@ -3,7 +3,7 @@ import React from "react";
 const TokenCard = ({ item, onClick, onCollect }) => {
   if (item.token_id > 21) {
     return (
-      <div className="ui fluid card" style={{ width: '300px' }}>
+      <div className="ui fluid card" style={{ width: '300px', display: 'flex' }}>
         <div className="image">
           <img
             onClick={onClick}

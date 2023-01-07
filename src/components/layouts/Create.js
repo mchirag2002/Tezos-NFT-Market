@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import '../css/style.css'
 import { useFilePicker } from "use-file-picker";
 import { NFTStorage, File } from "nft.storage";
 
@@ -63,8 +63,8 @@ const Create = ({ Tezos }) => {
     };
 
     return (
-        <div>
-            <form className="ui form error">
+        <div style={{ marginTop: '100px', color: 'white' }}>
+            <form className="ui form error" style={{ color: 'white' }}>
                 <div
                     className={`field required ${loadingSubmit ? "disabled" : ""
                         }`}

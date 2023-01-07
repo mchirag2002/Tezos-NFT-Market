@@ -15,6 +15,21 @@ header {
     color: white;
 }
 
+.ui .form .field label {
+    color: white;
+}
+
+.ui .form {
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.ui .basic button {
+    background: #01181e !important;
+}
+
 .container {
     align-items: center;
     text-align: center;
@@ -82,7 +97,7 @@ header {
 
     /* flex-direction: column; */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
 }
 

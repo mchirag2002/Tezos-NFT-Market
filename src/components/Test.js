@@ -1,5 +1,6 @@
 import React from 'react'
 import App from './App'
+import Withnav from './Withnav'
 import "./css/style.css"
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -8,6 +9,7 @@ import {
     incrementData,
     decrementData,
 } from "../actions";
+import Create from "./layouts/Create";
 import {
     BrowserRouter,
     Link,
@@ -20,6 +22,7 @@ const Test = ({ Tezos, wallet, setTezos }) => {
         return state.walletConfig.user;
     });
     const dispatch = useDispatch();
+    const [visible, setVisible] = React.useState("block");
     const onClick = (event) => {
         event.preventDefault();
         if (selector.userAddress === "") {
@@ -45,19 +48,19 @@ const Test = ({ Tezos, wallet, setTezos }) => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto" style={{ display: 'flex', alignItems: 'baseline' }}>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="index.html" style={{ color: 'aliceblue' }}>Home</a>
+                                    <Link className="nav-link" to={'/Withnav'} style={{ color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("block")}>Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link" href="market.html" style={{ color: 'aliceblue' }}>Catalogue</a> */}
                                     {selector.userAddress !== "" ? (
-                                        <Link className="item" to="/App" style={{ textDecoration: 'none', color: 'aliceblue' }}>
+                                        <Link className="item" to="/App" style={{ textDecoration: 'none', color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("none")}>
                                             Market Place
                                         </Link>
                                     ) : null}
                                 </li>
                                 <li className="nav-item">
                                     {selector.userAddress !== "" ? (
-                                        <Link className="item" to="/create" style={{ textDecoration: 'none', color: 'aliceblue' }}>
+                                        <Link className="item" to="/create" style={{ textDecoration: 'none', color: 'aliceblue', marginLeft: '10px' }}>
                                             Create NFT
                                         </Link>
                                     ) : null}
@@ -79,73 +82,13 @@ const Test = ({ Tezos, wallet, setTezos }) => {
             <Routes>
                 <Route path="/app" element={<App />}>
                 </Route>
+                <Route path="/create" element={<Create />}>
+                </Route>
+                <Route path='/withnav' element={<Withnav />}></Route>
             </Routes>
-            <center>
-                <div className="intro-box">
-                    <h1>WELCOME TO THE WORLD</h1>
-                    <h1>OF <span style={{ color: '#f8835c' }}>OPPORTUNITIES</span></h1>
-                    <p>The place to buy, sell, trade and enjoy NFTs. Increase your portfolio liquidity and
-                        diversification, find
-                        the price for your collections and help grow your movement.
-                        <br /> Or maybe just browse and appreciate the awesome work done by the community.
-                    </p>
-                    <div className="buttons">
-                        {selector.userAddress !== "" ? (<button>Buy NFTs</button>) : null}
-                        {selector.userAddress !== "" ? (<button>Showcase your talent</button>) : null}
-                        {selector.userAddress !== "" ? (<button>I would rather see</button>) : null}
-                    </div>
-                </div>
-                <center>
-                    <div className="nft" style={{ width: '70vw' }}>
-                        <div className="nft-display">
-                            <div className="nft-display-content">
-                                <h1> Find Awesome Creations</h1>
-                                <h2>The place to buy, sell and trade NFTs.</h2>
-                                <p>Grow your portfolio and lead the market on the NFT marketplace. View the different
-                                    statuses of NFTs
-                                    available for sale, bid, or buy them.<br />
-                                    Use the Tezos India Network to complete all your transactions. Enjoy the optimized usability and
-                                    quick view of available entities.
-                                </p>
-                                <h2 style={{ marginTop: '40px' }}> Art is an explosion ❌</h2>
-                                <h1>Help art explode ✅</h1>
-                                <h2>Upvote the art pieces you like and help the creators reach a wider audience</h2>
-                                <p>PS: want them to create something for you? Just use our website to connect with the artist and
-                                    get it done 😉</p>
-                            </div>
-                            <div className="nft-display-carousel">
-                                <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <img className="d-block w-100" src="./images/nft1.jpg" alt="First slide" />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src="./images/nft2.jpg" alt="Second slide" />
-                                        </div>
-                                    </div>
-                                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                        data-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="sr-only">Previous</span>
-                                    </a>
-                                    <a className="carousel-control-next" href="#carouselExampleControls" role="button"
-                                        data-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="sr-only">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="buttons button-nft">
-                            {selector.userAddress !== "" ? (<button>Explore the Marketplace</button>) : null}
-                        </div>
-                    </div>
-                </center>
-                <div className="footer">
-                    <hr />
-                    <p>©Fracto-NFT - 2023 | All rights reserved.</p>
-                </div>
-            </center>
+            {/* <center style={{ width: '100%' }}> */}
+
+            {/* </center> */}
             {/* </Router> */}
         </>
     )

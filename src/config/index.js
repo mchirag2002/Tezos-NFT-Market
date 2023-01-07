@@ -4,3 +4,9 @@ const config = {
 };
 
 export default config;
+// const config = {
+//   contractAddress: "KT1KLFv92qHk7F1o8pe65UnV6JfTcvGTEWUr",
+//   tokenAddress: "KT1B99cNqnDS1ucWfuTRcoqhmMatvsEQ1M66"
+// }
+
+// export default config;
