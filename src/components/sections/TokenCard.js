@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/style.css'
-const TokenCard = ({ item, onClick, onCollect }) => {
-  if (item.token_id > 21) {
+const TokenCard = ({ item, onClick, onCollect, onUpvote }) => {
+
     return (
       <center>
         <div className="ui fluid card" style={{ width: '400px', minWidth: '100px', display: 'flex', margin: '20px', height: '430px' }}>
@@ -36,10 +36,13 @@ const TokenCard = ({ item, onClick, onCollect }) => {
               <button className="ui basic button" onClick={onCollect}>
                 {item.collectable ? "Buy" : "Sold Out"}
               </button>
+              <button className="ui basic button" onClick={onUpvote}>
+                Upvote
+              </button>
             </span>
             <span>
               Upvotes :
-              <div>hi</div>
+              <div>{item.upvotes}</div>
             </span>
 
           </div>
@@ -47,6 +50,6 @@ const TokenCard = ({ item, onClick, onCollect }) => {
       </center>
     );
   }
-};
+
 
 export default TokenCard;

@@ -51,12 +51,12 @@ const Test = ({ Tezos, wallet, setTezos }) => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto" style={{ display: 'flex', alignItems: 'baseline' }}>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to={'/Withnav'} style={{ color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("block")}>Home</Link>
+                                    <Link className="nav-link" to='/withnav' style={{ color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("block")}>Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link" href="market.html" style={{ color: 'aliceblue' }}>Catalogue</a> */}
                                     {selector.userAddress !== "" ? (
-                                        <Link className="item" to="/App" style={{ textDecoration: 'none', color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("none")}>
+                                        <Link className="item" to='/app' style={{ textDecoration: 'none', color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("none")}>
                                             Market Place
                                         </Link>
                                     ) : null}
@@ -82,14 +82,7 @@ const Test = ({ Tezos, wallet, setTezos }) => {
                     </div>
                 </nav>
             </header>
-            <Routes>
-                <Route path="/app" element={<App />}>
-                </Route>
-                <Route path="/create" element={<Create Tezos={Tezos} />} />
-                {/* <Route path="/show/:id" element={<Show Tezos={Tezos} />} /> */}
-                {/* <Route path="/" element={<Home Tezos={Tezos} />} /> */}
-                <Route path='/withnav' element={<Withnav />}></Route>
-            </Routes>
+            
             {/* <center style={{ width: '100%' }}> */}
 
             {/* </center> */}
