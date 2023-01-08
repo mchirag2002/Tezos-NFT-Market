@@ -133,6 +133,7 @@ export const fetchData = () => {
           ...l1,
           ...l2,
           token_id: d2[i].value.token_id,
+          upvotes: d2[i].value.upvotes,
         };
       }
       console.log(tokenData);
@@ -177,3 +178,18 @@ export const collectNFT = ({ Tezos, amount, id }) => {
   };
 };
 
+export const upVoteNFT = ({ Tezos, id }) => {
+  return async (dispatch) => {
+    try {
+      const contract = await Tezos.wallet.at(config.contractAddress);
+
+      const op = await contract.methods
+        .upvoter(id)
+        .send();
+      await op.confirmation();
+      dispatch(fetchData());
+    } catch (e) {
+      console.log(e);
+    }
+  };
+};

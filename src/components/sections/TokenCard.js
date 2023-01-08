@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import '../css/style.css'
 const TokenCard = ({ item, onClick, onCollect }) => {
+  const [vote, setVote] = useState(1);
   if (item.token_id > 21) {
+    let upvoted = 2;
+    // const [vote, setV] = React.useState("block");
+    const onUpvote = () => {
+      setVote(vote + 1)
+    }
     return (
       <center>
         <div className="ui fluid card" style={{ width: '400px', minWidth: '100px', display: 'flex', margin: '20px', height: '430px' }}>
@@ -30,16 +36,21 @@ const TokenCard = ({ item, onClick, onCollect }) => {
           <div className="extra content" style={{ marginBottom: '10px' }}>
             <span>
               Token ID:
-              <div style={{ color: "black" }}>{item.token_id}</div>
+              <div style={{ color: "black" }}>{item.token_id - 21}</div>
             </span>
             <span className="right floated">
               <button className="ui basic button" onClick={onCollect}>
                 {item.collectable ? "Buy" : "Sold Out"}
               </button>
             </span>
+            <span className="right floated">
+              <button className="ui basic button" onClick={onUpvote}>
+                Upvote
+              </button>
+            </span>
             <span>
               Upvotes :
-              <div>hi</div>
+              <div>{vote}</div>
             </span>
 
           </div>

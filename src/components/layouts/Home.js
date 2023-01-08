@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import '../css/style.css'
-import { collectNFT } from "../../actions";
+import { collectNFT, upVoteNFT } from "../../actions";
 import Token from "../sections/TokenCard";
 
 const Home = ({ Tezos }) => {
@@ -19,10 +19,13 @@ const Home = ({ Tezos }) => {
       onClick={() =>
         navigate(`/show/${obj.token_id}`)
       }
+      onUpvote={() =>
+        dispatch(upVoteNFT({ Tezos, id: obj.token_id }))
+      }
     />
   ));
-  // console.log({ tokens});
-  return <div className="container" style={{}}><div classname="ui link three column grid cards" style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginTop: '100px' }}>{tokens}</div></div>
+  console.log({ tokens });
+  return <div className="container" style={{}}><div className="ui link three column grid cards" style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginTop: '100px' }}>{tokens}</div></div>
 };
 
 export default Home;
