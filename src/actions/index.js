@@ -11,6 +11,7 @@ export const connectWallet = ({ wallet, Tezos }) => {
       Tezos.setWalletProvider(wallet);
 
       const activeAccount = await wallet.client.getActiveAccount();
+      console.log(activeAccount)
       if (!activeAccount) {
         await wallet.requestPermissions({
           network: {
@@ -21,7 +22,7 @@ export const connectWallet = ({ wallet, Tezos }) => {
       }
       const userAddress = await wallet.getPKH();
       const balance = await Tezos.tz.getBalance(userAddress);
-
+      console.log(balance);
       payload.user = {
         userAddress: userAddress,
         balance: balance.toNumber(),

@@ -30,6 +30,16 @@ header {
     background: #01181e !important;
 }
 
+.ui .card {
+    margin: 20px;
+    margin-top: 80px;
+    height: 400px;
+}
+
+.ui .card .extra span {
+    margin-top: 5px;
+}
+
 .container {
     align-items: center;
     text-align: center;

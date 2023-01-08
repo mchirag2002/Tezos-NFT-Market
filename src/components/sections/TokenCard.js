@@ -36,6 +36,10 @@ const TokenCard = ({ item, onClick, onCollect }) => {
             Token ID:
             <div style={{ color: "black" }}>{item.token_id}</div>
           </span>
+          <span style={{ marginTop: '10px' }}>
+            <button style={{ border: '1px solid black', padding: '5px' }}>☝️</button>
+            <span style={{ border: '1px solid black', padding: '6px', width: '60px' }}>hi</span>
+          </span>
         </div>
       </div>
     );
