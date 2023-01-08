@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import '../css/style.css'
+
 const TokenCard = ({ item, onClick, onCollect, onUpvote }) => {
 
     return (
@@ -30,7 +31,7 @@ const TokenCard = ({ item, onClick, onCollect, onUpvote }) => {
           <div className="extra content" style={{ marginBottom: '10px' }}>
             <span>
               Token ID:
-              <div style={{ color: "black" }}>{item.token_id}</div>
+              <div style={{ color: "black" }}>{item.token_id - 21}</div>
             </span>
             <span className="right floated">
               <button className="ui basic button" onClick={onCollect}>
@@ -40,9 +41,16 @@ const TokenCard = ({ item, onClick, onCollect, onUpvote }) => {
                 Upvote
               </button>
             </span>
+            <span className="right floated">
+              <button className="ui basic button" onClick={onUpvote}>
+                Upvote
+              </button>
+            </span>
             <span>
               Upvotes :
+
               <div>{item.upvotes}</div>
+
             </span>
 
           </div>

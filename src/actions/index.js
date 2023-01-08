@@ -133,6 +133,7 @@ export const fetchData = () => {
           ...l1,
           ...l2,
           token_id: d2[i].value.token_id,
+          upvotes: d2[i].value.upvotes,
         };
       }
       console.log(tokenData);
@@ -178,7 +179,9 @@ export const collectNFT = ({ Tezos, amount, id }) => {
 };
 
 
+
 export const upvoteNFT = ({ Tezos, id }) => {
+
   return async (dispatch) => {
     try {
       const contract = await Tezos.wallet.at(config.contractAddress);
@@ -193,4 +196,3 @@ export const upvoteNFT = ({ Tezos, id }) => {
     }
   };
 };
-

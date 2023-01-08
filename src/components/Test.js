@@ -56,7 +56,9 @@ const Test = ({ Tezos, wallet, setTezos }) => {
                                 <li className="nav-item">
                                     {/* <a className="nav-link" href="market.html" style={{ color: 'aliceblue' }}>Catalogue</a> */}
                                     {selector.userAddress !== "" ? (
-                                        <Link className="item" to='/app' style={{ textDecoration: 'none', color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("none")}>
+
+                                        <Link className="item" to="/app" style={{ textDecoration: 'none', color: 'aliceblue', marginLeft: '10px' }} onClick={() => setVisible("none")}>
+
                                             Market Place
                                         </Link>
                                     ) : null}
