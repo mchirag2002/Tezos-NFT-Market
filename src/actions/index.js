@@ -178,7 +178,10 @@ export const collectNFT = ({ Tezos, amount, id }) => {
   };
 };
 
-export const upVoteNFT = ({ Tezos, id }) => {
+
+
+export const upvoteNFT = ({ Tezos, id }) => {
+
   return async (dispatch) => {
     try {
       const contract = await Tezos.wallet.at(config.contractAddress);

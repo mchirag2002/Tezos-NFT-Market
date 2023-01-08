@@ -10,6 +10,7 @@ import {
     ColorMode
 } from "@airgap/beacon-sdk";
 import Withnav from './Withnav'
+import App from './App'
 import { fetchData, fetchContractData, _walletConfig } from "../actions";
 
 
@@ -72,10 +73,12 @@ export const Test1 = () => {
             <Test Tezos={Tezos} setTezos={setTezos} wallet={wallet} />
             {/* <Withnav /> */}
             <Routes>
-                {/* <Route path="/create" element={<Create Tezos={Tezos} />} /> */}
+                <Route path="/app" element={<Home Tezos={Tezos} />} >
+                </Route>
+                <Route path="/create" element={<Create Tezos={Tezos} />} />
                 {/* <Route path="/show/:id" element={<Show Tezos={Tezos} />} /> */}
                 {/* <Route path="/" element={<Home Tezos={Tezos} />} /> */}
-                {/* <Route path="/app" element={<Test />} /> */}
+                <Route path='/withnav' element={<Withnav />}></Route>
             </Routes>
         </div>
     )
