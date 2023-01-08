@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/css/main.a03a2599.css",
+    "main.js": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/js/main.34c416a2.js",
+    "static/js/792.ff5590cc.chunk.js": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/js/792.ff5590cc.chunk.js",
+    "static/media/background.jpg": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/media/background.c813c29184f0cbeb8234.jpg",
+    "index.html": "/mchirag2002/Tezos-NFT-Fractionalize-Market/index.html",
+    "main.a03a2599.css.map": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/css/main.a03a2599.css.map",
+    "main.34c416a2.js.map": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/js/main.34c416a2.js.map",
+    "792.ff5590cc.chunk.js.map": "/mchirag2002/Tezos-NFT-Fractionalize-Market/static/js/792.ff5590cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a03a2599.css",
+    "static/js/main.34c416a2.js"
+  ]
+}
