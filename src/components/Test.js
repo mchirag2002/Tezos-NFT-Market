@@ -16,6 +16,9 @@ import {
     useRouteMatch,
 } from "react-router-dom";
 import { Route, Routes, Switch } from "react-router";
+import Home from "./layouts/Home";
+// import Create from "./layouts/Create";
+import Show from "./layouts/Show";
 
 const Test = ({ Tezos, wallet, setTezos }) => {
     const selector = useSelector((state) => {
@@ -82,8 +85,9 @@ const Test = ({ Tezos, wallet, setTezos }) => {
             <Routes>
                 <Route path="/app" element={<App />}>
                 </Route>
-                <Route path="/create" element={<Create />}>
-                </Route>
+                <Route path="/create" element={<Create Tezos={Tezos} />} />
+                {/* <Route path="/show/:id" element={<Show Tezos={Tezos} />} /> */}
+                {/* <Route path="/" element={<Home Tezos={Tezos} />} /> */}
                 <Route path='/withnav' element={<Withnav />}></Route>
             </Routes>
             {/* <center style={{ width: '100%' }}> */}

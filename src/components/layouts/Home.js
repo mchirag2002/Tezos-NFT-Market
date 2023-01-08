@@ -22,7 +22,7 @@ const Home = ({ Tezos }) => {
     />
   ));
   // console.log({ tokens});
-  return <div classname="ui link three column grid cards" style={{ display: 'flex', marginTop: '100px', alignItems: 'baseline' }}>{tokens}</div>
+  return <div className="container" style={{}}><div classname="ui link three column grid cards" style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginTop: '100px' }}>{tokens}</div></div>
 };
 
 export default Home;

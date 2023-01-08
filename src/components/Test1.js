@@ -9,8 +9,17 @@ import {
     defaultEventCallbacks,
     ColorMode
 } from "@airgap/beacon-sdk";
-
+import Withnav from './Withnav'
 import { fetchData, fetchContractData, _walletConfig } from "../actions";
+
+
+import Header from './Header';
+
+
+import { Route, Routes } from "react-router";
+import Home from "./layouts/Home";
+import Create from "./layouts/Create";
+import Show from "./layouts/Show";
 
 export const Test1 = () => {
 
@@ -61,6 +70,13 @@ export const Test1 = () => {
     return (
         <div className="ui container">
             <Test Tezos={Tezos} setTezos={setTezos} wallet={wallet} />
+            {/* <Withnav /> */}
+            <Routes>
+                {/* <Route path="/create" element={<Create Tezos={Tezos} />} /> */}
+                {/* <Route path="/show/:id" element={<Show Tezos={Tezos} />} /> */}
+                {/* <Route path="/" element={<Home Tezos={Tezos} />} /> */}
+                {/* <Route path="/app" element={<Test />} /> */}
+            </Routes>
         </div>
     )
 };
