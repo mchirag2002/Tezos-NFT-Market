@@ -24,12 +24,11 @@ const Home = ({ Tezos }) => {
       }
       onUpvote={() =>
 
-   
-        dispatch(upVoteNFT({ Tezos, id: obj.token_id }))
+
+        dispatch(upvoteNFT({ Tezos, id: obj.token_id }))
       }
     />
   ));
-  console.log({ tokens });
 
   return <div className="container" style={{}}><div className="ui link three column grid cards" style={{ display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginTop: '100px' }}>{tokens}</div></div>
 };

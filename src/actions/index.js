@@ -133,7 +133,6 @@ export const fetchData = () => {
           ...l1,
           ...l2,
           token_id: d2[i].value.token_id,
-          upvotes: d2[i].value.upvotes,
         };
       }
       console.log(tokenData);
